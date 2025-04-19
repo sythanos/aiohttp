@@ -37,7 +37,7 @@ extensions = [
             "vendor/llhttp/src/native/api.c",
             "vendor/llhttp/src/native/http.c",
         ],
-        define_macros=[("LLHTTP_STRICT_MODE", 0)],
+        define_macros=[("LLHTTP_STRICT_MODE", 0), ("Py_GIL_DISABLED", "1")]],
         include_dirs=["vendor/llhttp/build"],
     ),
     Extension("aiohttp._http_writer", ["aiohttp/_http_writer.c"]),
